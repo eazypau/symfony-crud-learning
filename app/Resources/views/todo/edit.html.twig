@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<style>
+		.paddingTop {
+			padding: 7rem;
+		}
+	</style>
+	<div class="paddingTop">
+		<h2 class="page-header">Edit Todos</h2>
+		{{form_start(form)}}
+		{{form_widget(form)}}
+		{{form_end(form)}}
+	</div>
+{% endblock %}

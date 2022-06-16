@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<style>
+		.paddingTop {
+			padding: 7rem;
+		}
+	</style>
+	<div class="paddingTop">
+		<a class='btn btn-default' href="/todos">Back to Todos</a>
+		<h2 class="page-header">{{todo.name}}</h2>
+		<ul class="list-group">
+			<li class="list-group-item">Category:{{todo.category}}</li>
+			<li class="list-group-item">Priority:{{todo.priority}}</li>
+			<li class="list-group-item">Due:<strong>{{todo.dueDate | date('F j, Y, g:i a')}}</strong>
+			</li>
+		</ul>
+		<p>Description: {{todo.descrption}}</p>
+	</div>
+{% endblock %}
